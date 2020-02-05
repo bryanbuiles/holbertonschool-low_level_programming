@@ -1,11 +1,10 @@
-#include < stdio.h>
+#include <stdio.h>
 
 /**
-* main - point whics is compiler detect
-*
-* Return: always 0
-*
-*/
+ * main - Function for entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
