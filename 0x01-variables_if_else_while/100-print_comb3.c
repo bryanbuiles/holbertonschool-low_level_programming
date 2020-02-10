@@ -1,20 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - entry point
  *
  * Return: Always 0 (success)
  */
+
 int main(void)
 {
-int lo;
-for (lo = '0' ; lo <= '9' ; lo++)
+int l;
+int j;
+for (l = '0' ; l <= '9' ; l++)
 {
-putchar(lo);
+for (j = '0' ; j <= '9' ; j++)
+if (!(l > j || l == j))
+{
+putchar(l);
+putchar(j);
+if (!(l == '8' && j == '9'))
+{
 putchar(',');
 putchar(' ');
- if ( lo > '9')
-  
+}
+}
 }
 putchar('\n');
 return (0);
