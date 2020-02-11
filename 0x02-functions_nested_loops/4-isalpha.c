@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
- * _isalpha : check alphabetic character
+ * _isalpha - check alphabetic character
+ * @c: first operand
  *
  * Return: 1 is lowercase or 0 if not
  */
