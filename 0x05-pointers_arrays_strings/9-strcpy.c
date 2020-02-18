@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
-   * rev_string - entry point
-    * @s: pointer
-     * Return: Always 0 (success)
-      */
+ * *_strcpy - entry point
+ * @dest: pointer
+ * @src: pointer
+ * Return: Always 0 (success)
+ */
 
 char *_strcpy(char *dest, char *src)
 {
@@ -11,7 +12,7 @@ char *_strcpy(char *dest, char *src)
 
 	for (n = 0; src[n] != '\0'; n++)
 	{
-		dest[n]= src[n];
-	}	
+		dest[n] = src[n];
+	}
 	return (dest);
 }
