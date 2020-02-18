@@ -1,5 +1,4 @@
-B#include "holberton.h"
-
+#include "holberton.h"
 /**
  * _strlen - entry point
  * @s : pointer
@@ -12,6 +11,6 @@ int _strlen(char *s)
 int i;
 for (i = 0; s[i] != '\0'; ++i)
 {
-return (i);
 }
+return (i);
 }
