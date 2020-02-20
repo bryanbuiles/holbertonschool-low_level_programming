@@ -2,8 +2,8 @@
 
 /**
   * _strcmp - entry point
-  * @s1: pointer
-  * @s2: pointer
+  * @s1: pointer 1
+  * @s2: pointer 2
   * Return: always 0 (success)
  */
 
