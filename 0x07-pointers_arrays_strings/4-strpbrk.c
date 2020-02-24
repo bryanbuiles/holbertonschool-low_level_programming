@@ -12,7 +12,6 @@ char *_strpbrk(char *s, char *accept)
 	int j;
 	int i;
 
-
 	for (j = 0; s[j] != '\0'; j++)
 	{
 		for (i = 0; accept[i] != '\0' ; i++)
@@ -22,10 +21,8 @@ char *_strpbrk(char *s, char *accept)
 			s = &s[j];
 			return (s);
 			}
-			
 		}
-			if (s[j] == 0)
-			s = '\0';
+			
 	}
-	return (s);
+	return (0);
 }
