@@ -8,8 +8,12 @@ int _squarefunction(int o, int p);
 int _sqrt_recursion(int n)
 {
 if (n < 0)
+{
 return (-1);
+}
+{
 return (_squarefunction(n, (n + 1) / 2));
+}
 }
 /**
  * _squarefunction - second function
@@ -22,7 +26,11 @@ int _squarefunction(int o, int p)
 if (p < 1)
 return (-1);
 else if (p * p == o)
-
+{
 return (p);
+}
+else
+{
 return (_squarefunction(o, p - 1));
+}
 }
