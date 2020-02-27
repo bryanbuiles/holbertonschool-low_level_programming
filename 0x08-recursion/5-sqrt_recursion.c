@@ -11,8 +11,9 @@ if (n < 0)
 {
 return (-1);
 }
+else
 {
-return (_squarefunction(n, (n + 1) / 2));
+return (_squarefunction(n, 1));
 }
 }
 /**
@@ -23,14 +24,16 @@ return (_squarefunction(n, (n + 1) / 2));
  */
 int _squarefunction(int o, int p)
 {
-if (p < 1)
-return (-1);
+if (o /  2 < p) 
+{
+	return (-1);
+}
 else if (p * p == o)
 {
 return (p);
 }
 else
 {
-return (_squarefunction(o, p - 1));
+return (_squarefunction(o, p  + 1));
 }
 }
