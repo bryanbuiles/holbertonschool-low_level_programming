@@ -1,5 +1,5 @@
 #include "holberton.h"
-int _squarefunction(int n, int i);
+int _squarefunction(int o, int p);
 /**
  * _sqrt_recursion - entry point
  * @n: Number
