@@ -1,24 +1,28 @@
 #include "holberton.h"
 int _squarefunction(int n, int i);
-
 /**
- * factorial - entry point
+ * _sqrt_recursion - entry point
  * @n: Number
- * Return: Factorial n
+ * Return: n
  */
-
 int _sqrt_recursion(int n)
 {
-	if( n < 0 )
-		return (-1);
-
-	return (_squarefunction(n, 1));
+if (n < 0)
+return (-1);
+return (_squarefunction(n, (n + 1) / 2));
 }
-	int _squarefunction(int n, int i)
+/**
+ * _squarefunction - second function
+ * @o: variable
+ * @p: second variable
+ * Return: square root of a number
+ */
+int _squarefunction(int o, int p)
 {
-	if (i < 1)
-		return (-1);
-	else if (i * i == n)
-		return (_squarefunction(n, i + 1));
-	return (0);
+if (p < 1)
+return (-1);
+else if (p * p == o)
+
+return (p);
+return (_squarefunction(o, p - 1));
 }
