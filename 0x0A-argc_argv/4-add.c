@@ -23,7 +23,7 @@ j = j + atoi(argv[i]);
 }
 if (argc < 1)
 {
-printf("0\n");
+return (0);
 }
 printf("%d\n", j);
 return (0);
