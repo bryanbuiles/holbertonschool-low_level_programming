@@ -5,7 +5,7 @@
 /**
  * alloc_grid - entry point
  * @width: size string
- * @height: char
+ * @height: chars
  * Return: malloc (success)
  */
 
