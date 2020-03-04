@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * fre_grid - entry point
+ * free_grid - entry point
  * @grid: size string
  * @height: chars
  * Return: Void (success)
