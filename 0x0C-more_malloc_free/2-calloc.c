@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
-   * create_array - entry point
-    * @size: size string
-     * @c: char
-      * Return: malloc (success)
-       */
+  * *_calloc - entry point
+  * @size: size string
+  * @nmemb: char
+  * Return: malloc (success)
+ */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -26,6 +26,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		a[i] = 0;
 	}
-	a[i] = '\0';
 	return (str);
 }
