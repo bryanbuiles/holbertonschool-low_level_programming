@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+
 /**
   * *_calloc - entry point
   * @size: size string
@@ -10,21 +11,18 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *str;
-	int *a;
+	char *str;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	a = malloc(size * nmemb);
+	str = malloc(size * nmemb);
 
-	if (a == 0)
+	if (str == 0)
 		return (NULL);
-	str = a;
-
-	for (i = 0; i < (size * nmemb); i++)
+		for (i = 0; i < (size * nmemb); i++)
 	{
-		a[i] = 0;
+		str[i] = 0;
 	}
 	return (str);
 }
