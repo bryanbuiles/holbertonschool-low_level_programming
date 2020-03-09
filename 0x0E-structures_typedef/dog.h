@@ -7,5 +7,4 @@ char *name;
 char *owner;
 float age;
 };
-	
-#endif 
+#endif
