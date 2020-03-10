@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * freedog - entry point
+ * free_dog - entry point
  * @d: pointer
  */
 
