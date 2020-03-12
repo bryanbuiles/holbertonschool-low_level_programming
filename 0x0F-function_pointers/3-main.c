@@ -5,7 +5,7 @@
 /**
  * main - entry function
  * @argc: Operator
- * @argv: NUmber
+ * @argv: Number
  * Return: 0
 */
 
