@@ -4,7 +4,7 @@
 
 /**
  * main - entry function
- * @argc: OPerator
+ * @argc: Operator
  * @argv: NUmber
  * Return: 0
 */
