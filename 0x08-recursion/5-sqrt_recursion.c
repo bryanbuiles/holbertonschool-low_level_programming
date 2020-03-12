@@ -23,7 +23,7 @@ return (_squarefunction(n, 1));
  * Return: square root of a number
  */
 int _squarefunction(int o, int p)
-{
+{ 
 if (o /  2 < p) 
 {
 	return (-1);
