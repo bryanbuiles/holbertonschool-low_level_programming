@@ -44,7 +44,7 @@ void print_all(const char * const format, ...)
 				printf("%s", j);
 				printf("%s", coma);
 				break;
-			}
+		}
 			n++;
 	}
 	printf("\n");
