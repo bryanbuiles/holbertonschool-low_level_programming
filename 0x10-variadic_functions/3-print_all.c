@@ -39,13 +39,13 @@ void print_all(const char * const format, ...)
 				j = va_arg(valist, char *);
 				if (j == NULL)
 				{
-					printf("(nil)");
+					j = "(nil)";
 				}
 				printf("%s", j);
 				printf("%s", coma);
 				break;
 		}
-			n++;
+		n++;
 	}
 	printf("\n");
 	va_end(valist);
