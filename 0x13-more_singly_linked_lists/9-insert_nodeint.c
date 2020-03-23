@@ -6,7 +6,7 @@
  * insert_nodeint_at_index - inster a node in index.
  * @head: head node
  * @idx: index
- * @n: Date
+ * @n: Data
  * Return: The data of Heaf
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)

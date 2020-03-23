@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * sum_listint- sum all the values of a list_t list.
+ * sum_listint- add all the values of a list_t list.
  * @head: entry point
- * Return: The sum of nodes
+ * Return: The add of nodes
  */
 int sum_listint(listint_t *head)
 {
@@ -13,13 +13,10 @@ int sum_listint(listint_t *head)
 
 	if (head == NULL)
 		return (0);
-
 	while (head != NULL)
 	{
-		{
-			i = i + head->n;
-			head = head->next;
-		}
+		i = i + head->n;
+		head = head->next;
 	}
 	return (i);
 }
