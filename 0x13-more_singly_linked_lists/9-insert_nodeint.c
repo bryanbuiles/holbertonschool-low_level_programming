@@ -1,7 +1,7 @@
-#include <stdlib.h>
+#include "lists.h"
 #include <string.h>
 #include <stdio.h>
-#include "lists.h"
+#include <stdlib.h>
 /**
  * insert_nodeint_at_index - inster a node in index.
  * @head: head node
@@ -12,13 +12,12 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *temp;
-	unsigned int i = 0;
 	listint_t *newnode;
 
 	temp = *head;
 	newnode = malloc(sizeof(listint_t));
 	newnode->n = n;
-	if (head == NULL)
+	if (newnode == NULL)
 		return (NULL);
 	if (idx == 0)
 	{
@@ -26,29 +25,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = newnode;
 		return (*head);
 	}
-	while (temp != NULL)
+	while (idx > 1)
 	{
-		if (i == idx - 1)
-		{
-			if (newnode == NULL)
-			{
-				return (NULL);
-			}
-			else
-			{
-				newnode->next = temp->next;
-				temp->next = newnode;
-				return (newnode);
-			}
-		}
-		if (temp->next != NULL)
-			temp = temp->next;
+		temp = temp->next;
+		idx--;
 		if (!temp)
 		{
 			free(newnode);
 			return (NULL);
 		}
-		i++;
 	}
-	return (NULL);
+	newnode->next = temp->next;
+	temp->next = newnode;
+	return (newnode);
 }
