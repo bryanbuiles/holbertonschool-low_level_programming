@@ -14,12 +14,11 @@ void print_binary(unsigned long int n)
 	if (n == 0)
 	{
 		_putchar('0');
-		return;
 	}
 	while (temp != 0)
 	{
-		temp = temp >> 1;
 		i++;
+		temp = temp >> 1;
 	}
 	for (j = i - 1; j >= 0; j--)
 	{
