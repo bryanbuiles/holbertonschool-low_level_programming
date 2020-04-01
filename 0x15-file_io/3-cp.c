@@ -25,21 +25,21 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (file_from == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	while (file_fromread >= 1024)
+	file_fromread = 1;
+	while (file_fromread)
 	{
 		file_fromread = read(file_from, buf, 1024);
 		if (file_fromread == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			if (close(file_from) == -1)
-				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
-			if (close(file_to) == -1)
-				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 			exit(98);
 		}
-		file_w = write(file_to, buf, file_fromread);
-		if (file_w == -1 || file_w != file_fromread)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		if (file_fromread > 0)
+		{
+			file_w = write(file_to, buf, file_fromread);
+			if (file_w == -1 || file_w != file_fromread)
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		}
 	}
 	if (close(file_from) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
