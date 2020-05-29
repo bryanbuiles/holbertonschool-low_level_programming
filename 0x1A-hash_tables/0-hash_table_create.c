@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <stdbool.h>
 /**
  * hash_table_create - get a node in index.
  * @size: size of hash table
@@ -14,14 +15,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 	htable = malloc(sizeof(hash_table_t));
 	if (htable == NULL)
 		return (NULL);
+	htable->size = size;
 	htable->array = malloc(size * sizeof(hash_node_t));
 	if (htable->array == NULL)
 	{
 		free(htable);
-		htable = NULL;
 		return (NULL);
 	}
-	htable->size = size;
 	memset(htable->array, 0, size * sizeof(hash_node_t));
 	return (htable);
 }
