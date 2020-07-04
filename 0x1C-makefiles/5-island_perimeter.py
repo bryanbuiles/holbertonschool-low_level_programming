@@ -12,7 +12,7 @@ def island_perimeter(grid):
         c = 0
         for j in i:
             if grid[c2][c] == 1:
-                try:
+                if c < (len(grid[0]) - 1):
                     if c > 0:
                         if grid[c2][c + 1] in l and grid[c2][c - 1] in l:
                             size += 2
@@ -25,26 +25,29 @@ def island_perimeter(grid):
                             size += 2
                         elif grid[c2][c + 1] == 1:
                             size += 1
-                    if c2 < (len(grid) - 1):
-                        if c2 > 0:
-                            if grid[c2 + 1][c] in l and grid[c2 - 1][c] in l:
-                                size += 2
-                            elif grid[c2 + 1][c] == 1 and grid[c2 - 1][c] == 1:
-                                size += 0
-                            else:
-                                size += 1
-                        else:
-                            if grid[c2 + 1][c] in l:
-                                size += 2
-                            elif grid[c2 + 1][c] == 1:
-                                size += 1
-                    else:
-                        if grid[c2 - 1][c] in l:
+                else:
+                    if grid[c2][c - 1] in l:
+                        size += 2
+                    elif grid[c2][c - 1] == 1:
+                        size += 1
+                if c2 < (len(grid) - 1):
+                    if c2 > 0:
+                        if grid[c2 + 1][c] in l and grid[c2 - 1][c] in l:
                             size += 2
-                        elif grid[c2 - 1][c] == 1:
+                        elif grid[c2 + 1][c] == 1 and grid[c2 - 1][c] == 1:
+                            size += 0
+                        else:
                             size += 1
-                except:
-                    IndexError
+                    else:
+                        if grid[c2 + 1][c] in l:
+                            size += 2
+                        elif grid[c2 + 1][c] == 1:
+                            size += 1
+                else:
+                    if grid[c2 - 1][c] in l:
+                        size += 2
+                    elif grid[c2 - 1][c] == 1:
+                        size += 1
             c += 1
         c2 += 1
     return (size)
