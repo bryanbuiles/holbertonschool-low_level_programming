@@ -17,7 +17,7 @@ int binary_search(int *array, size_t size, int value)
 	inferior = 0;
 	superior = size - 1;
 
-	if (array == NULL)
+	if (array == NULL || value == NULL)
 		return (-1);
 
 	while (inferior <= superior)

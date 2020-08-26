@@ -4,7 +4,7 @@
 #include <math.h>
 
 /**
-  * jump_search - entry point
+  * jump_search - search jumping in blocks
   * @array: pointer to the first element of the array
   * @size: is the number of elements in array
   * @value: is the value to search for
@@ -16,7 +16,7 @@ int jump_search(int *array, size_t size, int value)
 	int i, j, jump, temp;
 
 	j = size - 1;
-	if (array == NULL)
+	if (array == NULL || value == NULL)
 		return (-1);
 	jump = sqrt(size);
 
