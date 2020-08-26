@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
-#include <math.h>
 
 /**
   * jump_search - search jumping in blocks
@@ -16,7 +13,7 @@ int jump_search(int *array, size_t size, int value)
 	int i, j, jump, temp;
 
 	j = size - 1;
-	if (array == NULL || value == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 	jump = sqrt(size);
 

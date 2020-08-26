@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
 /**
@@ -18,7 +16,7 @@ int binary_search2(int *array, int inicia, size_t size, int value)
 	inferior = inicia;
 	superior = size - 1;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	while (inferior <= superior)
@@ -58,7 +56,7 @@ int exponential_search(int *array, size_t size, int value)
 	n = size - 1;
 	i = 1;
 
-	if (array == NULL || value == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	if (array[0] == value)

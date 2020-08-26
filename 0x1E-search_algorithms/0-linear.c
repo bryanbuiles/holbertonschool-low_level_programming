@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
 /**
@@ -16,7 +14,7 @@ int linear_search(int *array, size_t size, int value)
 
 	j = size - 1;
 
-	if (array == NULL || value == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	for (i = 0; i <= j; i++)
