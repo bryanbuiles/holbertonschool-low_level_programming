@@ -31,8 +31,6 @@ int advanced_binary2(int *array, size_t left, size_t right, int value)
 	int i, j;
 	size_t m;
 
-	if (array[0] == 0 && right == 0)
-		return (0);
 	if (left > right)
 		return (-1);
 
@@ -47,12 +45,13 @@ int advanced_binary2(int *array, size_t left, size_t right, int value)
 			printf("%d, ", array[i]);
 	}
 	m = (right + left) / 2;
-	if (array[m - 1] == value)
+
+	if (array[m - 1] == value && array[m] == value && array[m - 1] != 0)
 		return (advanced_binary2(array, left, m, value));
 	if (array[m] == value)
 		return (m);
 	if (value < array[m])
-		return (advanced_binary2(array, left, m - 1, value));
+		return (advanced_binary2(array, left, m, value));
 	else if (value > array[m])
 		return (advanced_binary2(array, m + 1, right, value));
 
